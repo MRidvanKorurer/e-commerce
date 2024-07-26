@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 
   return (
     closeHeader ? (null) : (
-        <div className=' relative bg-black text-white h-10 flex justify-center gap-x-20 items-center font-light '>
+        <div className=' relative bg-black text-white h-full md:h-10 flex flex-col md:flex-row justify-center gap-x-20 items-center font-light '>
             <div className=' flex justify-center items-center gap-x-2'>
                 <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
 
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
             </div>
 
 
-            <div onClick={() => setCloseHeader(true)} className=' absolute right-5 cursor-pointer hover:text-red-600 transition-all'>
+            <div onClick={() => setCloseHeader(true)} className=' absolute top-[10px] right-5 cursor-pointer hover:text-red-600 transition-all'>
                 <FaRegWindowClose size={20} />
             </div>
         </div>
