@@ -85,7 +85,6 @@ router.get("/", categoryController_1.default.getAllCategories);
  *         description: Internal server error
  */
 router.get("/:id", categoryController_1.default.getSingleCategory);
-router.get("/:id", categoryController_1.default.getSingleCategory);
 /**
  * @swagger
  * /api/categories/:

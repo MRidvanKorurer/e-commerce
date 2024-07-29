@@ -7,6 +7,12 @@ const endpoints = {
         createCategory:  `${apiUrl}/categories`,
         getSingleCategory:  `${apiUrl}/categories/:id`
     },
+    products: {
+        baseURL : `${apiUrl}/products`,
+        getAllProducts: `${apiUrl}/products`,
+        getFlashProducts:  `${apiUrl}/products/flash-products`,
+        getTopSalesProducts:  `${apiUrl}/products/top-sales-products`,
+    }
 }
 
 

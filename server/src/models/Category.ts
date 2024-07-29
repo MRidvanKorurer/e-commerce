@@ -2,7 +2,7 @@ import { Model, DataTypes } from "sequelize";
 import sequelize from "../config/database";
 
 class Category extends Model {
-    public id!: string;
+    public id!: number;
     public name!: string;
     public image!: string;
 }
@@ -10,10 +10,9 @@ class Category extends Model {
 Category.init(
     {
         id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false
         },
         name: {
             type: DataTypes.STRING,

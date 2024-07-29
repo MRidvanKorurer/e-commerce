@@ -3,7 +3,7 @@ import config from "./config";
 
 
 const sequelize = new Sequelize(
-  config.db.database || "eCommerceDb",
+  config.db.database || "eCommerceDB",
   config.db.user || "root",
   config.db.password || "",
   {

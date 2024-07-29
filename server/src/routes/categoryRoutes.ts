@@ -89,7 +89,7 @@ router.get("/", categoryController.getAllCategories);
  *         description: Internal server error
  */
 router.get("/:id", categoryController.getSingleCategory);
-router.get("/:id", categoryController.getSingleCategory);
+
 
 
 
