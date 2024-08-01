@@ -1,9 +1,6 @@
 import React from 'react'
 import JBL from "../../assets/JBL.png";
 
-interface IProps {
-
-}
 
 const BuyNowOne: React.FC = () => {
   return (

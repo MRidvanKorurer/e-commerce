@@ -37,7 +37,19 @@ export const productApi = createApi({
         },
       }),
 
+
+      getNewProducts: builder.query<IProductRes, void>({
+        query: () => {
+          return {
+              url: endpoints.products.getNewProducts + '/',
+              method: "GET",
+          }
+        },
+      }),
+
   }),
 });
 
-export const {useGetAllProductsQuery, useGetFlashProductsQuery, useGetTopSalesProductsQuery} = productApi;
+export const {
+  useGetAllProductsQuery, useGetFlashProductsQuery, useGetTopSalesProductsQuery, useGetNewProductsQuery
+} = productApi;

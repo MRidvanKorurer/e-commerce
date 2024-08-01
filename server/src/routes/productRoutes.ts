@@ -252,5 +252,57 @@ router.get("/flash-products", productController.getIsFlashProducts);
  */
 router.get("/top-sales-products", productController.getTopSalesProducts);
 
+/**
+ * @swagger
+ * /api/products/new-products:
+ *   get:
+ *     summary: Get last 12 products
+ *     tags: [Products]
+ *     responses:
+ *       200:
+ *         description: Products found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 categories:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                      id: 
+ *                         type: number
+ *                      categoryId: 
+ *                         type: number
+ *                      name:
+ *                        type: string
+ *                      description:
+ *                        type: string
+ *                      price:
+ *                        type: number
+ *                      discount:
+ *                        type: number
+ *                      images:
+ *                        type: string
+ *                      attributes:
+ *                        type: string
+ *                      brand:
+ *                        type: string
+ *                      stock:
+ *                        type: number
+ *                      rating:
+ *                        type: number
+ *                      isFlash:
+ *                        type: boolean
+ *       404:
+ *         description: Products not found
+ *       500:
+ *         description: Internal server error
+ */
+router.get("/new-products", productController.getNewProducts);
+
 
 export default router;

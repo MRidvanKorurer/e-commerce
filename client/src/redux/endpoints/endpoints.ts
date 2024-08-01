@@ -12,6 +12,7 @@ const endpoints = {
         getAllProducts: `${apiUrl}/products`,
         getFlashProducts:  `${apiUrl}/products/flash-products`,
         getTopSalesProducts:  `${apiUrl}/products/top-sales-products`,
+        getNewProducts:  `${apiUrl}/products/new-products`,
     }
 }
 

@@ -80,6 +80,24 @@ class ProductService {
         }
     }
 
+
+    async getNewProducts() {
+        try {
+            const products = await Product.findAll({
+                order: [
+                    ['createdAt', 'DESC']
+                ],
+                limit: 12
+            });
+
+            if(!products) return null;
+
+            return products;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
 }
 
 

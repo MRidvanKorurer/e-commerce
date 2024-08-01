@@ -5,6 +5,7 @@ import Error from '../Helpers/Error';
 import Loading from '../Helpers/Loading';
 import { IProduct } from '../../types/types';
 import ProductItem from './ProductItem';
+import { CgChevronDoubleRightR } from 'react-icons/cg';
 
 const BestSallingProducts: React.FC = () => {
     const {data, isLoading, isError} = useGetTopSalesProductsQuery();
@@ -26,7 +27,7 @@ const BestSallingProducts: React.FC = () => {
             <div className=' flex flex-wrap gap-10 justify-center items-center'>
                 {
                     data?.products.map((item: IProduct) => (
-                        <ProductItem item={item}/>
+                        <ProductItem key={item.id} item={item}/>
                     ))
                 }
             </div>
@@ -40,8 +41,11 @@ const BestSallingProducts: React.FC = () => {
             {content}
         </div>
         <div className=' flex justify-center items-center absolute bottom-2 left-0 right-0'>
-            <button className=' bg-black text-white hover:bg-orange-600 px-2 py-1 rounded w-60 transition-all'>Tüm Ürünleri Gör</button>
-        </div>
+        <button className=' bg-black text-white hover:bg-orange-600 px-2 py-1 rounded w-60 transition-all flex justify-center gap-x-5 items-center '>
+          <p>Tüm Ürünleri Gör</p>
+        <CgChevronDoubleRightR size={20}/>
+        </button>
+      </div>
     </div>
   )
 }

@@ -94,5 +94,23 @@ class ProductService {
             }
         });
     }
+    getNewProducts() {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const products = yield Product_1.default.findAll({
+                    order: [
+                        ['createdAt', 'DESC']
+                    ],
+                    limit: 12
+                });
+                if (!products)
+                    return null;
+                return products;
+            }
+            catch (error) {
+                console.log(error);
+            }
+        });
+    }
 }
 exports.default = new ProductService();

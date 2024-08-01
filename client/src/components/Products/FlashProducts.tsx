@@ -5,6 +5,8 @@ import Loading from '../Helpers/Loading';
 import Error from '../Helpers/Error';
 import { IProduct } from '../../types/types';
 import ProductItem from './ProductItem';
+import { CgChevronDoubleRightR } from "react-icons/cg";
+
 
 const FlashProducts: React.FC = () => {
   const {data, isLoading, isError} = useGetFlashProductsQuery();
@@ -46,7 +48,10 @@ const FlashProducts: React.FC = () => {
       </div>
 
       <div className=' flex justify-center items-center absolute bottom-2 left-0 right-0'>
-        <button className=' bg-black text-white hover:bg-orange-600 px-2 py-1 rounded w-60 transition-all'>Tüm Ürünleri Gör</button>
+        <button className=' bg-black text-white hover:bg-orange-600 px-2 py-1 rounded w-60 transition-all flex justify-center gap-x-5 items-center '>
+          <p>Tüm Ürünleri Gör</p>
+        <CgChevronDoubleRightR size={20}/>
+        </button>
       </div>
     </div>
   )

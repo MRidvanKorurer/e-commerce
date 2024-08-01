@@ -4,6 +4,9 @@ import MainSlider from '../components/Slider/MainSlider'
 import FlashProducts from '../components/Products/FlashProducts'
 import BestSallingProducts from '../components/Products/BestSallingProducts'
 import BuyNowOne from '../components/Products/BuyNowOne'
+import BrowseCategories from '../components/Categories/BrowseCategories'
+import NewProducts from '../components/Products/NewProducts'
+import NewArrival from '../components/Products/NewArrival'
 
 const HomePage: React.FC = () => {
   return (
@@ -28,6 +31,11 @@ const HomePage: React.FC = () => {
             <BuyNowOne />
           </div>  
           <BestSallingProducts />
+          <BrowseCategories />
+          <NewProducts />
+          <div>
+            <NewArrival />
+          </div>
       </div>
     </div>
   )

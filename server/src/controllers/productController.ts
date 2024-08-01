@@ -103,6 +103,30 @@ class ProductController {
         }
     }
 
+       // fetch last 12 products
+       async getNewProducts(req: Request, res: Response) {
+        try {
+            const products = await productService.getNewProducts();
+
+            if(!products) {
+                return res.status(400).json({
+                    success: false,
+                    message: "Products Not Fount"
+                });
+            }
+
+            return res.status(200).json({
+                success: true,
+                products
+            })
+        } catch (error) {
+            return res.status(500).json({
+                success: false,
+                message: "Server Error"
+            })
+        }
+    }
+
 }
 
 
